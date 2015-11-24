@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+              android:layout_width="match_parent"
+              android:background="@drawable/background4">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:singleLine="true"
+        android:id="@+id/etName"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <TextView
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Height (ft' in'')"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>/
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="30dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight (lbs)"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/etHeightFt"
+                android:inputType="number"
+                android:textSize="30dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ft  "
+                android:textSize="30dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/etHeightIn"
+                android:inputType="number"
+                android:textSize="30dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingRight="65dp"
+                android:text="in  "
+                android:textSize="30dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:textSize="30dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"
+                android:id="@+id/etWeight"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="lbs"
+                android:textSize="30dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <TextView
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Experience"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Beginner  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <CheckBox
+            android:onClick="onCheckboxClicked"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:id="@+id/cbBeginner"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Experienced  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <CheckBox
+            android:onClick="onCheckboxClicked"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:id="@+id/cbExperienced"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitness Goals"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Fitness  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <CheckBox
+            android:onClick="onCheckboxClicked"
+            android:textSize="25dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbGeneralFitness"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strength  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <CheckBox
+            android:onClick="onCheckboxClicked"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:id="@+id/cbStrength"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight Loss"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <CheckBox
+            android:onClick="onCheckboxClicked"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbWeightLoss"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <EditText
+        android:singleLine="true"
+        android:textSize="30dp"
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+
+    <TextView
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <EditText
+        android:singleLine="true"
+        android:id="@+id/etPassword"
+        android:textSize="30dp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bRegister"
+            android:text="Sign Me Up"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="30dp"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_gravity="bottom"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

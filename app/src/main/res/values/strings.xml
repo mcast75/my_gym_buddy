@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyGymBuddy</string>
+
+    <string name="login">Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_workout">Workout</string>
+    <string name="title_activity_set">set</string>
+</resources>
