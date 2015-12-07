@@ -10,13 +10,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Set;
 
 public class Workout extends AppCompatActivity implements View.OnClickListener {
     Button bStartWorkout, bFinishWorkout;
     TextView weekNum, dayNum, ex1, weight1, set1, rep1, ex2, weight2, set2, rep2, ex3, weight3, set3, rep3,
             ex4, weight4, set4, rep4, ex5, weight5, set5, rep5, ex6, weight6, set6, rep6,
             ex7, weight7, set7, rep7, ex8, weight8, set8, rep8;
+
+    WorkoutLocalStore mWorkoutLocalStore;
 
     WorkoutPlan mWorkoutPlan;
     @Override
@@ -74,6 +79,8 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
         mWorkoutPlan = new WorkoutPlan("Test Program 1");
 
+        mWorkoutLocalStore = new WorkoutLocalStore(this);
+
 
     }
 
@@ -82,10 +89,12 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
     public void onStart() {
         super.onStart();
         getWorkout(mWorkoutPlan);
+        Log.d("ADebugTag2", "Excercisegtergrtgrtbgrtsbrbrb 2: \n" + mWorkoutPlan.ex1);
+
     }
 
 
-    private void getWorkout(WorkoutPlan workoutPlan){
+    public void getWorkout(WorkoutPlan workoutPlan){
         ServerRequests serverRequests = new ServerRequests(this);
         serverRequests.fetchWorkoutDataInBackground(workoutPlan, new GetWorkoutCallback() {
             @Override
@@ -95,9 +104,15 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
                 } else {
                     dayNum.setText("" + returnedWorkoutPlan.day);
                     weekNum.setText("" + returnedWorkoutPlan.week);
-                    Log.d("ADebugTag1", "Excercise 2: \n" + returnedWorkoutPlan.ex2);
+
 
                     ex1.setText(returnedWorkoutPlan.ex1);
+
+                    ImageView pic = (ImageView) findViewById(R.id.image1);
+                    int resID = getResources().getIdentifier(fixName(ex1.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
+
                     if (returnedWorkoutPlan.weight1 == 0) {
                         weight1.setText("BW");
                     } else {
@@ -110,6 +125,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
                     Log.d("ADebugTag2", "Excercise 2: \n" + returnedWorkoutPlan.ex2);
 
                     ex2.setText(returnedWorkoutPlan.ex2);
+
+                    pic = (ImageView) findViewById(R.id.image2);
+                    resID = getResources().getIdentifier(fixName(ex2.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight2 == 0) {
                         weight2.setText("BW");
                     } else {
@@ -120,6 +140,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex3.setText(returnedWorkoutPlan.ex3);
+
+                    pic = (ImageView) findViewById(R.id.image3);
+                    resID = getResources().getIdentifier(fixName(ex3.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight3 == 0) {
                         weight3.setText("BW");
                     } else {
@@ -130,6 +155,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex4.setText(returnedWorkoutPlan.ex4);
+
+                    pic = (ImageView) findViewById(R.id.image4);
+                    resID = getResources().getIdentifier(fixName(ex4.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight4 == 0) {
                         weight4.setText("BW");
                     } else {
@@ -140,6 +170,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex5.setText(returnedWorkoutPlan.ex5);
+
+                    pic = (ImageView) findViewById(R.id.image5);
+                     resID = getResources().getIdentifier(fixName(ex5.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight5 == 0) {
                         weight5.setText("BW");
                     } else {
@@ -150,6 +185,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex6.setText(returnedWorkoutPlan.ex6);
+
+                    pic = (ImageView) findViewById(R.id.image6);
+                    resID = getResources().getIdentifier(fixName(ex6.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight6 == 0) {
                         weight6.setText("BW");
                     } else {
@@ -160,6 +200,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex7.setText(returnedWorkoutPlan.ex7);
+
+                    pic = (ImageView) findViewById(R.id.image7);
+                    resID = getResources().getIdentifier(fixName(ex7.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight7 == 0) {
                         weight7.setText("BW");
                     } else {
@@ -170,6 +215,11 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
 
                     ex8.setText(returnedWorkoutPlan.ex8);
+
+                    pic = (ImageView) findViewById(R.id.image8);
+                    resID = getResources().getIdentifier(fixName(ex8.getText().toString()), "drawable", getPackageName());
+                    pic.setImageResource(resID);
+
                     if (returnedWorkoutPlan.weight8 == 0) {
                         weight8.setText("BW");
                     } else {
@@ -180,8 +230,12 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
 
                 }
 
+                mWorkoutLocalStore.storeWorkoutData(returnedWorkoutPlan);
+                Log.d("ADebugTag2", "Excercisegtergrtgrtbgrtsbrbrb 2: \n" + mWorkoutLocalStore.getCurrentWorkout().ex1);
             }
         });
+
+
     }
 
 
@@ -192,6 +246,9 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
             case R.id.bFinishWorkout:
                 startActivity(new Intent(Workout.this, Home.class));
                  break;
+
+            case R.id.bStartWorkout:
+                startActivity(new Intent(Workout.this, WorkSet.class));
         }
 
     }
@@ -203,6 +260,14 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
         dialogBuilder.setMessage("Error Loading Workout");
         dialogBuilder.setPositiveButton("Ok", null);
         dialogBuilder.show();
+    }
+
+    private String fixName(String ex){
+        String temp = ex.toLowerCase();
+        temp=temp.replaceAll("\\p{Z}","");
+        return temp;
+
+
     }
 
 }

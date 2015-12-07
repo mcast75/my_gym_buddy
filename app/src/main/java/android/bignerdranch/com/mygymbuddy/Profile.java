@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Profile extends AppCompatActivity implements View.OnClickListener {
 
     Button bProfHome;
-    TextView tvProfName, tvProfHeightFt, tvProfHeightIn, tvProfWeight, tvProfBM, tvProfSM, tvProfDM, tvProfExp;
+    TextView tvProfName, tvProfHeightFt, tvProfHeightIn, tvProfWeight, tvProfBM, tvProfSM, tvProfDM, tvProfExp, tvProfGoals;
     UserLocalStore mUserLocalStore;
 
     @Override
@@ -27,6 +27,7 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
         tvProfSM = (TextView) findViewById(R.id.profSM);
         tvProfDM = (TextView) findViewById(R.id.profDM);
         tvProfExp = (TextView) findViewById(R.id.profExp);
+        tvProfGoals = (TextView) findViewById(R.id.goals);
 
 
 
@@ -70,11 +71,22 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
             tvProfDM.setText("" + user.deadMax);
         }
 
+        Log.d("PROFILE", "USER EXP: \n" + user.goals);
+
         if (user.experience == 1){
             tvProfExp.setText("Beginner");
         }else if(user.experience == 2){
             tvProfExp.setText("Experienced");
         }
+
+        if (user.goals == 1){
+            tvProfGoals.setText("General Fitness");
+        }else if(user.experience == 2){
+            tvProfGoals.setText("Strength");
+        }else if(user.experience == 2) {
+            tvProfGoals.setText("Weight Loss");
+        }
+
 
 
     }

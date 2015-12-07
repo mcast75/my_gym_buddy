@@ -261,7 +261,7 @@
             android:textColor="@android:color/holo_orange_light"/>
 
         <TextView
-            android:text="CODED LATER"
+            android:id="@+id/goals"
             android:textSize="35dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

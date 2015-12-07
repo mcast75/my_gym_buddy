@@ -91,10 +91,6 @@ public class ServerRequests {
 
             try {
                 post.setEntity(new UrlEncodedFormEntity(dataToSend));
-                client.execute(post);
-
-
-                post.setEntity(new UrlEncodedFormEntity(dataToSend));
                 HttpResponse httpResponse = client.execute(post);
 
                 HttpEntity entity = httpResponse.getEntity();

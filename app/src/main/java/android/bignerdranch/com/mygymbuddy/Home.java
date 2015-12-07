@@ -26,6 +26,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         bProfile.setOnClickListener(this);
         bLogout.setOnClickListener(this);
         bWorkout.setOnClickListener(this);
+        bHowIFeel.setOnClickListener(this);
 
         mUserLocalStore = new UserLocalStore(this);
     }
@@ -48,6 +49,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
                 mUserLocalStore.setUserLoggedIn(false);
 
                 startActivity(new Intent(this, GymActivity.class));
+                break;
+
+            case R.id.bHowIFeel:
+                startActivity(new Intent(this, HowIFeel.class));
                 break;
 
         }

@@ -1,0 +1,429 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="android.bignerdranch.com.mygymbuddy.HowIFeel"
+                android:backgroundTint="#000000"
+                android:background="#000000">
+
+    <Button
+        android:layout_marginLeft="450dp"
+        android:id="@+id/bHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"
+        android:text=">Home"
+        android:textSize="24dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:text="How I'm Feeling"
+            android:textSize="40dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:text="    >Tap Here To See How It Works"
+            android:textSize="24dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="-70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/feel"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/headFront"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:layout_marginTop="77dp"
+                android:layout_marginLeft="110dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/headBack"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="170dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/shoulderFront1"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="90dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/chest"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="-3dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/shoulderFront2"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="0dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/upperBack"
+                android:layout_width="135dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="123dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/bicep1"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="83dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/stomach"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/bicep2"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/tricep1"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="115dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/lowerBack"
+                android:layout_width="75dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="8dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/tricep2"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/wrist1"
+                android:layout_width="27dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="50dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/hips"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="35dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/wrist2"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/wrist3"
+                android:layout_width="27dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="50dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/gluts"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="35dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/wrist4"
+                android:layout_width="27dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/quad1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="100dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/quad2"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/hamstring1"
+                android:layout_width="50dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="150dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/hamstring2"
+                android:layout_width="50dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/knee1"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="90dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/knee2"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="30dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/shin1"
+                android:layout_width="40dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="90dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/shin2"
+                android:layout_width="40dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="55dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/calve1"
+                android:layout_width="50dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="130dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/calve2"
+                android:layout_width="50dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/foot1"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="80dp"/>
+
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/foot2"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="80dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/foot3"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="110dp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/foot4"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginLeft="50dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/mes1"
+               android:visibility="gone"
+               android:layout_marginTop="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="How intense is your "
+               android:textSize="24dp"
+               android:textColor="@android:color/holo_orange_light"/>
+
+           <TextView
+               android:id="@+id/bodyPart"
+               android:layout_marginTop="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="24dp"
+               android:textColor="@android:color/holo_orange_light"/>
+
+           <TextView
+               android:id="@+id/mes2"
+               android:visibility="gone"
+               android:layout_marginTop="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text=" pain?"
+               android:textSize="24dp"
+               android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

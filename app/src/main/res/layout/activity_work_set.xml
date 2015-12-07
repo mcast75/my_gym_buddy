@@ -1,0 +1,707 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="android.bignerdranch.com.mygymbuddy.WorkSet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="2"
+            android:background="@android:color/black">
+
+            <Button
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="   Finish Exercise  "
+                android:textSize="20dp"
+                android:id="@+id/nextExercise"
+                android:layout_weight="1"
+                android:layout_marginTop="-40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80dp"
+                android:text="|"
+                android:layout_marginTop="-20dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <Button
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Finish Workout"
+                android:textSize="20dp"
+                android:id="@+id/bFinishWorkout"
+                android:layout_weight="1"
+                android:layout_marginTop="-40dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height= "4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_orange_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="4.5">
+
+                <TextView
+                    android:id="@+id/setExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="36dp"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:text="Exercise"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/workSets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text=" Sets | "/>
+
+                    <TextView
+                        android:id="@+id/workReps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="5 "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text=" Reps"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_weight="6">
+
+                <ImageView
+                    android:id="@+id/exPic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="Record Set "
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:id="@+id/currentSet"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Here"
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/currentWeight"
+                android:inputType="number"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="100dp"
+                android:background="@android:color/black"
+                android:textSize="75dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="  X  "
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <EditText
+                android:id="@+id/currentReps"
+                android:inputType="number"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="0dp"
+                android:background="@android:color/black"
+                android:textSize="75dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/saveSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:text=" Save Set "
+                android:textSize="30dp"
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" |"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Prescribed: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 225"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actual: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 215"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height= "2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_orange_light" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" |"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Prescribed: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 225"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actual: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 215"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height= "2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_orange_light" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" |"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Prescribed: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 225"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actual: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 215"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height= "2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_orange_light" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" |"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Prescribed: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 225"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actual: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 215"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height= "2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_orange_light" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
