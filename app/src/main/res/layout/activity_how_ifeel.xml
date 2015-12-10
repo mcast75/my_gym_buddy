@@ -413,7 +413,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Pain/ Soreness Level: "
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_orange_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/painLevel"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <SeekBar
+                android:id="@+id/painBar"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"

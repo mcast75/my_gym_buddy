@@ -72,45 +72,123 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:layout_marginTop="48dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
+            android:layout_marginLeft="25dp"
+            android:text="Hi "
             android:textSize="36dp"
             android:textColor="@android:color/holo_orange_light"
             android:background="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="36dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:background="@android:color/black"/>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Workout:"
+            android:layout_marginLeft="25dp"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="36dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Program 1   Day "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="36dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dayNum"
+            android:text="1"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="36dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text="   Week 1"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="36dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:text="Ready to Workout?"
+            android:textSize="36dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:background="@android:color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:text="If You Are, Just Tap Workout At The Top Of The Screen"
+            android:textSize="36dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:background="@android:color/black"/>
+
+    </LinearLayout>
 
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Today's Workout:"
-                android:background="@android:color/black"
-                android:textColor="@android:color/holo_orange_light"
-                android:textSize="36dp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test Program 1   "
+            android:text="Not Feeling Too Hot?"
             android:background="@android:color/black"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="36dp"/>
@@ -118,18 +196,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Day 1   "
+            android:text="Just Tap How I Feel In The Upper Right Hand Corner For Personalized Recovery Exercises To Keep Your Workouts Productive and Safe, and Your Body Feeling 100%"
             android:background="@android:color/black"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="36dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Week 1"
-            android:background="@android:color/black"
-            android:textColor="@android:color/holo_orange_light"
-            android:textSize="36dp"/>
+
 
 
     </LinearLayout>

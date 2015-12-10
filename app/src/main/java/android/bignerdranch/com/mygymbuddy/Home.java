@@ -5,11 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
     Button bProfile, bWorkout, bHowIFeel, bLogout;
     UserLocalStore mUserLocalStore;
+    TextView name, dayNum;
+    static int day;
 
 
     @Override
@@ -22,6 +25,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         bHowIFeel = (Button) findViewById(R.id.bHowIFeel);
         bLogout = (Button) findViewById(R.id.bLogout);
         bWorkout = (Button) findViewById(R.id.bWorkout);
+        name = (TextView) findViewById(R.id.name);
+        dayNum = (TextView) findViewById(R.id.dayNum);
 
         bProfile.setOnClickListener(this);
         bLogout.setOnClickListener(this);
@@ -29,6 +34,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         bHowIFeel.setOnClickListener(this);
 
         mUserLocalStore = new UserLocalStore(this);
+
     }
 
     @Override
@@ -56,5 +62,24 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
                 break;
 
         }
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        if(day == 0)
+            day = 1;
+
+        name.setText(mUserLocalStore.getLoggedInUser().name);
+        dayNum.setText(day+"");
+
+    }
+
+    public static void updateDay(int i){
+        day = i;
+    }
+
+    public static int getDay(){
+        return day;
     }
 }

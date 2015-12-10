@@ -8,23 +8,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class HowIFeel extends AppCompatActivity implements View.OnClickListener{
+public class HowIFeel extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener{
 
     Button headFront, headBack, shoulderFront1, chest, shoudlerFront2, upperBack, bicep1, stomach,bicep2
             ,tricep1, lowerBack, tricep2, wrist1, hips, wrist2, wrist3, gluts, wrist4, quad1, quad2
             , hamstring1, hamstring2, knee1, knee2, shin1, shin2, calve1, calve2, foot1, foot2, foot3
             , foot4, bhome;
 
-    TextView mes1, bodyPart, mes2;
+    TextView mes1, bodyPart, mes2, painLevel;
+
+    SeekBar painBar;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_ifeel);
+
+        painLevel = (TextView) findViewById(R.id.painLevel);
+
+        painBar = (SeekBar) findViewById(R.id.painBar);
+        painBar.setMax(10);
+
+        painBar.setOnSeekBarChangeListener(this);
 
         headFront = (Button) findViewById(R.id.headFront);
         headBack = (Button) findViewById(R.id.headBack);
@@ -341,6 +352,28 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener{
 
         }
     }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        int i = painBar.getProgress();
+        painLevel.setText(i+"");
+        seekBar.setMax(10);
+
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress,
+                                  boolean fromUser) {
+        // TODO Auto-generated method stub
+
+    }
+
 }
 
 

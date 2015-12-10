@@ -5,6 +5,7 @@
                 tools:context="android.bignerdranch.com.mygymbuddy.WorkSet">
 
     <LinearLayout
+        android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -142,11 +143,20 @@
             android:layout_marginBottom="10dp">
 
             <TextView
+                android:id="@+id/record"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
-                android:text="Record Set "
+                android:text="Record "
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_orange_light"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set "
                 android:textSize="30dp"
                 android:textColor="@android:color/holo_orange_light"/>
 
@@ -155,11 +165,11 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
                 android:textSize="30dp"
                 android:textColor="@android:color/holo_orange_light"/>
 
             <TextView
+                android:id="@+id/here"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -236,6 +246,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/row1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -251,10 +262,10 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/set1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -275,6 +286,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preWeight1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -291,6 +303,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preRep1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -316,10 +329,10 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualWeight1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" 215"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -332,16 +345,17 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualReps1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/line1"
                     android:layout_gravity="bottom"
                     android:layout_width="match_parent"
                     android:layout_height= "2dp"
@@ -349,6 +363,124 @@
                     android:background="@android:color/holo_orange_light" />
 
                 <LinearLayout
+                    android:id="@+id/row2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:id="@+id/set2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" |"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Prescribed: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:id="@+id/preWeight2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 225"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:id="@+id/preRep2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actual: "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:id="@+id/actualWeight2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:id="@+id/actualReps2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:textColor="@android:color/holo_orange_light"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height= "2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/holo_orange_light" />
+
+                <LinearLayout
+                    android:id="@+id/row3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -367,7 +499,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"
+                        android:id="@+id/set3"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -388,6 +520,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preWeight3"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -404,6 +537,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preRep3"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -429,10 +563,10 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualWeight3"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" 215"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -445,16 +579,17 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualReps3"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/line3"
                     android:layout_gravity="bottom"
                     android:layout_width="match_parent"
                     android:layout_height= "2dp"
@@ -462,6 +597,7 @@
                     android:background="@android:color/holo_orange_light" />
 
                 <LinearLayout
+                    android:id="@+id/row4"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -480,7 +616,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"
+                        android:id="@+id/set4"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -501,6 +637,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preWeight4"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -517,6 +654,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preRep4"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -542,10 +680,10 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualWeight4"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" 215"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -558,16 +696,17 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualReps4"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/line4"
                     android:layout_gravity="bottom"
                     android:layout_width="match_parent"
                     android:layout_height= "2dp"
@@ -575,6 +714,7 @@
                     android:background="@android:color/holo_orange_light" />
 
                 <LinearLayout
+                    android:id="@+id/row5"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -593,7 +733,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"
+                        android:id="@+id/set5"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -614,6 +754,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preWeight5"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -630,6 +771,7 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/preRep5"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -655,10 +797,10 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualWeight5"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" 215"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
@@ -671,16 +813,17 @@
                         android:textColor="@android:color/holo_orange_light"/>
 
                     <TextView
+                        android:id="@+id/actualReps5"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6"
                         android:textSize="30dp"
                         android:textColor="@android:color/holo_orange_light"/>
 
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/line5"
                     android:layout_gravity="bottom"
                     android:layout_width="match_parent"
                     android:layout_height= "2dp"
