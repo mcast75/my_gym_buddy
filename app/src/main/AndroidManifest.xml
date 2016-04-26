@@ -3,6 +3,12 @@
     package="android.bignerdranch.com.mygymbuddy" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,14 +30,14 @@
             android:name=".Login"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_login"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Register"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".Home"
@@ -54,15 +60,75 @@
         <activity
             android:name=".HowIFeel"
             android:label="@string/title_activity_how_ifeel"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".WorkSet"
             android:label="@string/title_activity_work_set"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
-
+        <activity
+            android:name=".RegisterChoose"
+            android:label="@string/title_activity_register_choose" >
+        </activity>
+        <activity
+            android:name=".RegisterTrainer"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_register_trainer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".LoginTrainer"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login_trainer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".LoginChoose"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login_choose"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".HomeTrainer"
+            android:label="@string/title_activity_home_trainer" >
+        </activity>
+        <activity
+            android:name=".Comments"
+            android:label="@string/title_activity_comments" >
+        </activity>
+        <activity
+            android:name=".CreateThread"
+            android:label="@string/title_activity_create_thread" >
+        </activity>
+        <activity
+            android:name=".AddComment"
+            android:label="@string/title_activity_add_comment" >
+        </activity>
+        <activity
+            android:name=".TrainerWorkoutPlan"
+            android:label="@string/title_activity_trainer_workout_plan" >
+        </activity>
+        <activity
+            android:name=".ProfileTrainer"
+            android:label="@string/title_activity_profile_trainer" >
+        </activity>
+        <activity
+            android:name=".PostRecovery"
+            android:label="@string/title_activity_post_recovery" >
+        </activity>
+        <activity
+            android:name=".ClientList"
+            android:label="@string/title_activity_client_list" >
+        </activity>
+        <activity
+            android:name=".CreatePost"
+            android:label="@string/title_activity_create_post" >
+        </activity>
     </application>
 
 </manifest>

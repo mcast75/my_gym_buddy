@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".HomeActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:weightSum="1000">
+            <TextView
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/threadTitle"
+                android:textSize="28dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:textStyle="bold"
+                android:layout_weight="998"/>
+            <CheckBox
+                android:id="@+id/bLike"
+                android:onClick="onCheckboxClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:text="Likes("/>
+            <TextView
+                android:id="@+id/numLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:gravity="center"
+                android:textSize="22dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:text=")   "/>
+
+            <CheckBox
+                android:id="@+id/bDisLike"
+                android:onClick="onCheckboxClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:text="Dislikes("/>
+            <TextView
+                android:id="@+id/numDislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:gravity="center"
+                android:textSize="22dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:text=")   "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/createComment"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add New Comment"
+                android:clickable="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height= "2dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout android:id="@+id/table"
+                             android:layout_width="wrap_content"
+                             android:layout_height="fill_parent"
+                             android:focusableInTouchMode="true"
+                             android:focusable="true">
+
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/profButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See "
+                android:clickable="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/viewProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="'s Profile"
+                android:clickable="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="24dp"/>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:src="@drawable/icon2"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:gravity="bottom">
+
+
+            <Button
+                android:id="@+id/bHome2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_orange_light"
+                android:text="Home"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

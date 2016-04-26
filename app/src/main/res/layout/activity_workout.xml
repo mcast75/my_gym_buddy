@@ -2,15 +2,14 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_height="match_parent"
-              android:layout_width="match_parent"
-              android:background="@android:color/black">
+              android:layout_width="match_parent">
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="0dp">
 
         <Button
             android:background="@android:color/black"
@@ -33,6 +32,12 @@
             android:layout_weight="1"/>
 
     </LinearLayout>
+    <View
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height= "2dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_orange_light" />
 
 
     <ScrollView
@@ -56,16 +61,14 @@
                     android:layout_height="wrap_content"
                     android:text="Week "
                     android:textSize="36dp"
-                    android:textColor="@android:color/holo_orange_light"
-                    android:background="@android:color/black"/>
+                    android:textColor="@android:color/holo_orange_light"/>
 
                 <TextView
                     android:id="@+id/weekNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/holo_orange_light"
-                    android:textSize="36dp"
-                    android:background="@android:color/black"/>
+                    android:textSize="36dp"/>
 
 
                 <TextView
@@ -73,16 +76,14 @@
                     android:layout_height="wrap_content"
                     android:text="          Day "
                     android:textSize="36dp"
-                    android:textColor="@android:color/holo_orange_light"
-                    android:background="@android:color/black"/>
+                    android:textColor="@android:color/holo_orange_light"/>
 
                 <TextView
                     android:id="@+id/dayNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/holo_orange_light"
-                    android:textSize="36dp"
-                    android:background="@android:color/black"/>
+                    android:textSize="36dp"/>
 
                 </LinearLayout>
 
@@ -105,8 +106,7 @@
                             android:layout_height="wrap_content"
                             android:text=" 1 "
                             android:textSize="36dp"
-                            android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            android:textColor="@android:color/holo_orange_light"/>
 
                         <TextView
                             android:id="@+id/ex1"
@@ -114,7 +114,6 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -124,7 +123,6 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -133,7 +131,6 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
 
@@ -148,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="12"
                         android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        >
 
                         <ImageView
                             android:id="@+id/image1"
@@ -167,7 +164,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -177,7 +173,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -187,7 +182,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -197,7 +191,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -223,8 +216,7 @@
                             android:layout_height="wrap_content"
                             android:text=" 2 "
                             android:textSize="36dp"
-                            android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            android:textColor="@android:color/holo_orange_light"/>
 
                         <TextView
                             android:id="@+id/ex2"
@@ -232,7 +224,6 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -242,7 +233,6 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -251,7 +241,6 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
 
@@ -265,8 +254,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="12"
-                        android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        android:layout_marginBottom="0dp">
 
                         <ImageView
                             android:id="@+id/image2"
@@ -285,7 +273,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -295,7 +282,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -305,7 +291,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -315,7 +301,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -341,7 +327,7 @@
                             android:text=" 3 "
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            />
 
                         <TextView
                             android:id="@+id/ex3"
@@ -349,7 +335,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -359,7 +345,7 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -368,7 +354,7 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
 
@@ -383,7 +369,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="12"
                         android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        >
 
                         <ImageView
                             android:id="@+id/image3"
@@ -402,7 +388,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -412,7 +398,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -422,7 +408,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -432,7 +418,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -458,7 +444,7 @@
                             android:text=" 4 "
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            />
 
                         <TextView
                             android:id="@+id/ex4"
@@ -466,7 +452,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -476,7 +462,7 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -485,7 +471,7 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
 
@@ -500,7 +486,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="12"
                         android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        >
 
                         <ImageView
                             android:id="@+id/image4"
@@ -519,7 +505,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -529,7 +515,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -539,7 +525,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -549,7 +534,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -575,7 +559,7 @@
                             android:text=" 5 "
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            />
 
                         <TextView
                             android:id="@+id/ex5"
@@ -583,7 +567,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -593,7 +577,7 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -602,7 +586,7 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
 
@@ -617,7 +601,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="12"
                         android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        >
 
                         <ImageView
                             android:id="@+id/image5"
@@ -636,7 +620,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -646,7 +630,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -656,7 +640,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -666,7 +650,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -692,7 +676,7 @@
                             android:text=" 6 "
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            />
 
                         <TextView
                             android:id="@+id/ex6"
@@ -700,7 +684,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -710,7 +694,7 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -719,7 +703,7 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
 
@@ -734,7 +718,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="12"
                         android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        >
 
                         <ImageView
                             android:id="@+id/image6"
@@ -753,7 +737,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -763,7 +747,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -773,7 +757,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                         <TextView
@@ -783,7 +767,7 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
+
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -809,7 +793,7 @@
                             android:text=" 7 "
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            />
 
                         <TextView
                             android:id="@+id/ex7"
@@ -817,7 +801,6 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -827,7 +810,6 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -836,7 +818,6 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
 
@@ -850,8 +831,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="12"
-                        android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        android:layout_marginBottom="0dp">
 
                         <ImageView
                             android:id="@+id/image7"
@@ -870,7 +850,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -880,7 +859,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -890,7 +868,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -900,7 +877,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                     </LinearLayout>
@@ -925,8 +901,7 @@
                             android:layout_height="wrap_content"
                             android:text=" 8 "
                             android:textSize="36dp"
-                            android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"/>
+                            android:textColor="@android:color/holo_orange_light"/>
 
                         <TextView
                             android:id="@+id/ex8"
@@ -934,7 +909,6 @@
                             android:layout_height="wrap_content"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1.9"/>
 
                         <TextView
@@ -944,7 +918,6 @@
                             android:text="Weight"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -953,7 +926,6 @@
                             android:text="SetXRep"
                             android:textSize="36dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
 
@@ -967,8 +939,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="12"
-                        android:layout_marginBottom="0dp"
-                        android:background="@android:color/black">
+                        android:layout_marginBottom="0dp">
 
                         <ImageView
                             android:id="@+id/image8"
@@ -987,7 +958,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="2.45"/>
 
                         <TextView
@@ -997,7 +967,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -1007,7 +976,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                         <TextView
@@ -1017,7 +985,6 @@
                             android:textSize="36dp"
                             android:layout_marginTop="20dp"
                             android:textColor="@android:color/holo_orange_light"
-                            android:background="@android:color/black"
                             android:layout_weight="1"/>
 
                     </LinearLayout>

@@ -19,6 +19,7 @@ public class WorkoutLocalStore {
     public void storeWorkoutData(WorkoutPlan workout){
         SharedPreferences.Editor spEditor = workoutLocalDatabase.edit();
 
+        spEditor.putString("planID", workout.planID);
         spEditor.putString("planName", workout.planName);
         spEditor.putInt("week", workout.week);
         spEditor.putInt("day", workout.day);
@@ -69,6 +70,8 @@ public class WorkoutLocalStore {
     }
 
     public WorkoutPlan getCurrentWorkout(){
+
+        String planID = workoutLocalDatabase.getString("planID", "");
         String planName = workoutLocalDatabase.getString("planName", "");
         int week = workoutLocalDatabase.getInt("week", -1);
         int day = workoutLocalDatabase.getInt("day", -1);
@@ -113,7 +116,7 @@ public class WorkoutLocalStore {
         int numReps8 = workoutLocalDatabase.getInt("numReps8", -1);
         int weight8 = workoutLocalDatabase.getInt("weight8", -1);
 
-        WorkoutPlan storedWorkout = new WorkoutPlan(planName, week, day, ex1, numSets1, numReps1, weight1,
+        WorkoutPlan storedWorkout = new WorkoutPlan(planID, planName, week, day, ex1, numSets1, numReps1, weight1,
                 ex2, numSets2, numReps2, weight2, ex3, numSets3, numReps3, weight3, ex4, numSets4,
                 numReps4, weight4, ex5, numSets5, numReps5, weight5, ex6, numSets6, numReps6,
                 weight6, ex7, numSets7, numReps7, weight7, ex8, numSets8, numReps8, weight8);

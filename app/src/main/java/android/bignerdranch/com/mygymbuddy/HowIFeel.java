@@ -17,7 +17,10 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener,
     Button headFront, headBack, shoulderFront1, chest, shoudlerFront2, upperBack, bicep1, stomach,bicep2
             ,tricep1, lowerBack, tricep2, wrist1, hips, wrist2, wrist3, gluts, wrist4, quad1, quad2
             , hamstring1, hamstring2, knee1, knee2, shin1, shin2, calve1, calve2, foot1, foot2, foot3
-            , foot4, bhome;
+            , foot4, bhome, bShow;
+
+    RecoveryEx ex;
+    RecoveryLocalStore mRecoveryLocalStore;
 
     TextView mes1, bodyPart, mes2, painLevel;
 
@@ -30,10 +33,15 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_ifeel);
 
+        ex = new RecoveryEx();
+        mRecoveryLocalStore = new RecoveryLocalStore(this);
+
         painLevel = (TextView) findViewById(R.id.painLevel);
 
         painBar = (SeekBar) findViewById(R.id.painBar);
         painBar.setMax(10);
+
+        bShow = (Button) findViewById(R.id.bShow);
 
         painBar.setOnSeekBarChangeListener(this);
 
@@ -88,6 +96,7 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener,
         mes2 = (TextView) findViewById(R.id.mes2);
         bodyPart = (TextView) findViewById(R.id.bodyPart);
 
+        bShow.setOnClickListener(this);
         headFront.setOnClickListener(this);
         headBack.setOnClickListener(this);
         shoulderFront1.setOnClickListener(this);
@@ -350,7 +359,18 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener,
                 startActivity(new Intent(this, Home.class));
                 break;
 
+            case R.id.bShow:
+                ex.body_part = bodyPart.getText().toString();
+                mRecoveryLocalStore.storeRecoveryEx(ex);
+                startActivity(new Intent(this, PostRecovery.class));
+                break;
+
+
         }
+
+        ex.body_part = bodyPart.getText().toString();
+        mRecoveryLocalStore.storeRecoveryEx(ex);
+
     }
 
     @Override
@@ -358,6 +378,10 @@ public class HowIFeel extends AppCompatActivity implements View.OnClickListener,
         int i = painBar.getProgress();
         painLevel.setText(i+"");
         seekBar.setMax(10);
+
+        ex.discomfort = painLevel.getText().toString();
+        mRecoveryLocalStore.storeRecoveryEx(ex);
+
 
         // TODO Auto-generated method stub
     }

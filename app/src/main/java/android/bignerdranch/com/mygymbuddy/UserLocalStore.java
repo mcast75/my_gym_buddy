@@ -16,6 +16,13 @@ public class UserLocalStore {
 
     }
 
+    public void updateTrainer(int trainer){
+        SharedPreferences.Editor spEditor = userLocalDatabase.edit();
+        spEditor.putInt("trainer", trainer);
+        spEditor.commit();
+
+    }
+
     public void storeUserData(User user){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putString("name", user.name);
@@ -29,6 +36,8 @@ public class UserLocalStore {
         spEditor.putInt("deadMax", user.deadMax);
         spEditor.putInt("experience", user.experience);
         spEditor.putInt("goals", user.goals);
+        spEditor.putInt("numWorkouts", user.numWorkouts);
+        spEditor.putInt("trainer", user.trainer);
         spEditor.commit();
     }
 
@@ -44,9 +53,11 @@ public class UserLocalStore {
         int deadMax = userLocalDatabase.getInt("deadMax", -1);
         int experience = userLocalDatabase.getInt("experience",-1);
         int goals = userLocalDatabase.getInt("goals", -1);
+        int numWorkouts = userLocalDatabase.getInt("numWorkouts",-1);
+        int trainer = userLocalDatabase.getInt("trainer", 0);
 
         User storedUser = new User(name, username, password, heightFt, heightIn,
-        weight, benchMax, squatMax, deadMax, experience, goals);
+        weight, benchMax, squatMax, deadMax, experience, goals, numWorkouts, trainer);
         return storedUser;
 
     }

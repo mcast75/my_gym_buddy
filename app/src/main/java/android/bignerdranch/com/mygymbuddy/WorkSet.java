@@ -182,9 +182,6 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.bFinishWorkout:
 
-                Home.updateDay(Home.getDay()+1);
-
-
                 startActivity(new Intent(WorkSet.this, Home.class));
                 break;
 

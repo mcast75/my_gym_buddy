@@ -6,14 +6,14 @@ package android.bignerdranch.com.mygymbuddy;
 public class WorkoutPlan {
 
 
-    String planName, ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8;
+    String planID, planName, ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8;
     int week, day, numSets1, numReps1, weight1, numSets2, numReps2, weight2, numSets3,
             numReps3, weight3, numSets4, numReps4, weight4, numSets5, numReps5, weight5,
             numSets6, numReps6, weight6, numSets7, numReps7, weight7, numSets8, numReps8,
             weight8;
 
 
-    public WorkoutPlan(String planName, int week, int day, String ex1, int numSets1, int numReps1,
+    public WorkoutPlan(String planID, String planName, int week, int day, String ex1, int numSets1, int numReps1,
                        int weight1, String ex2, int numSets2, int numReps2,
                        int weight2, String ex3, int numSets3, int numReps3,
                        int weight3, String ex4, int numSets4, int numReps4,
@@ -23,6 +23,7 @@ public class WorkoutPlan {
                        int weight7, String ex8, int numSets8, int numReps8,
                        int weight8){
 
+        this.planID = planID;
         this.planName = planName;
         this.week = week;
         this.day =day;
@@ -69,9 +70,10 @@ public class WorkoutPlan {
     }
 
 
-    public WorkoutPlan(String planName){
+    public WorkoutPlan(String planID){
 
-        this.planName = planName;
+        this.planID = planID;
+        this.planName = "";
         this.week = -1;
         this.day = -1;
 
@@ -114,6 +116,10 @@ public class WorkoutPlan {
         this.numSets8 = -1;
         this.numReps8 = -1;
         this.weight8 = -1;
+    }
+
+    public void setPlanName(String name){
+        this.planName = name;
     }
 
 }

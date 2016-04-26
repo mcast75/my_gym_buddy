@@ -34,11 +34,11 @@ public class GymActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v){
         switch(v.getId()){
             case R.id.bLogin:
-                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, LoginChoose.class));
                 break;
 
             case R.id.bRegister:
-                startActivity(new Intent(this, Register.class));
+                startActivity(new Intent(this, RegisterChoose.class));
                 break;
         }
     }

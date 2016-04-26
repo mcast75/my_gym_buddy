@@ -13,4 +13,17 @@
     <string name="title_activity_set">set</string>
     <string name="title_activity_how_ifeel">HowIFeel</string>
     <string name="title_activity_work_set">WorkSet</string>
+    <string name="title_activity_register_choose">RegisterChoose</string>
+    <string name="title_activity_register_trainer">RegisterTrainer</string>
+    <string name="title_activity_login_trainer">LoginTrainer</string>
+    <string name="title_activity_login_choose">LoginChoose</string>
+    <string name="title_activity_home_trainer">HomeTrainer</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="title_activity_add_comment">AddComment</string>
+    <string name="title_activity_create_thread">CreateThread</string>
+    <string name="title_activity_trainer_workout_plan">TrainerWorkoutPlan</string>
+    <string name="title_activity_profile_trainer">ProfileTrainer</string>
+    <string name="title_activity_post_recovery">PostRecovery</string>
+    <string name="title_activity_client_list">ClientList</string>
+    <string name="title_activity_create_post">CreatePost</string>
 </resources>

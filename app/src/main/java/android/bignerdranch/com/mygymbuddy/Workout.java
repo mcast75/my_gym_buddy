@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 public class Workout extends AppCompatActivity implements View.OnClickListener {
@@ -22,6 +23,7 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
             ex7, weight7, set7, rep7, ex8, weight8, set8, rep8;
 
     WorkoutLocalStore mWorkoutLocalStore;
+    UserLocalStore mUserLocalStore;
 
     WorkoutPlan mWorkoutPlan;
     @Override
@@ -77,9 +79,35 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
         bStartWorkout.setOnClickListener(this);
         bFinishWorkout.setOnClickListener(this);
 
-        mWorkoutPlan = new WorkoutPlan("Test Program 1");
+        mUserLocalStore = new UserLocalStore(this);
+        User user = mUserLocalStore.getLoggedInUser();
+
+        String nextWorkout = "";
+
+        String[] beginnerWorkouts = new String[] {"b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9"};
+        String[] strengthWorkouts = new String[] {"s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"};
+        String[] weightLoss = new String[] {"w1", "w2", "w3", "w4", "w5", "w6", "w7", "w8", "w9"};
+        String[] generalFitness = new String[] {"g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9"};
+
+        if (user.experience == 1) {
+            nextWorkout = beginnerWorkouts[user.numWorkouts];
+        }else if(user.experience == 2){
+            if(user.goals == 1){
+                nextWorkout = generalFitness[user.numWorkouts];
+            }else if(user.goals == 2){
+                nextWorkout = strengthWorkouts[user.numWorkouts];
+            }else if(user.goals == 3){
+                nextWorkout = weightLoss[user.numWorkouts];
+            }
+        }
+
+        //mWorkoutPlan = new WorkoutPlan(nextWorkout);
+
+        mWorkoutPlan = new WorkoutPlan("t1");
 
         mWorkoutLocalStore = new WorkoutLocalStore(this);
+
+
 
 
     }

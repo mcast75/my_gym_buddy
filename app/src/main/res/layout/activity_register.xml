@@ -2,12 +2,25 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_height="match_parent"
-              android:padding="10dp"
               android:layout_width="match_parent"
-              android:background="@drawable/background4">
+              android:background="@drawable/icon2">
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Athlete Registration"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="40dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -21,7 +34,7 @@
         android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:background="@android:color/black"
         android:textColor="@android:color/holo_orange_light"/>
 
@@ -60,7 +73,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="20dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -154,7 +167,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,6 +209,7 @@
 
 
     <TextView
+        android:id="@+id/goalsText"
         android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -204,9 +218,11 @@
         android:textColor="@android:color/holo_orange_light"/>
 
     <LinearLayout
+        android:background="@android:color/black"
+        android:id="@+id/goalsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="20dp">
         <TextView
             android:textSize="25dp"
             android:layout_width="wrap_content"
@@ -267,6 +283,81 @@
 
 
     <TextView
+        android:id="@+id/maxText"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Rep Maxes"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_orange_light"/>
+
+    <LinearLayout
+        android:background="@android:color/black"
+        android:id="@+id/maxNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bench  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <EditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="30dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:id="@+id/etBenchMax"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Squat  "
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <EditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="30dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:id="@+id/etSquatMax"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dead Lift"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"/>
+        <EditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="30dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:textColor="@android:color/holo_orange_light"
+            android:id="@+id/etDeadMax"/>
+
+    </LinearLayout>
+
+
+    <TextView
         android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -316,6 +407,9 @@
             android:background="@android:color/black"
             android:textColor="@android:color/holo_orange_light"
             android:layout_gravity="bottom"/>
+
+
+    </LinearLayout>
 
 
     </LinearLayout>

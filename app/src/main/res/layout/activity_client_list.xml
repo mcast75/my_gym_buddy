@@ -1,0 +1,511 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="android.bignerdranch.com.mygymbuddy.PostRecovery">
+
+    <LinearLayout
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/black">
+
+            <Button
+                android:background="@android:color/black"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="20dp"
+                android:id="@+id/bHome"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height= "4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_orange_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="32dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="My Client List"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="10">
+
+            <LinearLayout
+                android:id="@+id/client1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="&#8226; "
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Name 1"
+                        android:layout_marginBottom="0dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Bench: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/bench1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Squat: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/squat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Dead Lift: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/dead1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="35dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/client2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="&#8226; "
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Name 1"
+                        android:layout_marginBottom="0dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Bench: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/bench2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Squat: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/squat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Dead Lift: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/dead2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="35dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/client3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="&#8226; "
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Name 1"
+                        android:layout_marginBottom="0dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Bench: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/bench3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Squat: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/squat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Dead Lift: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/dead3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="35dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/client4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="&#8226; "
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Name 1"
+                        android:layout_marginBottom="0dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Bench: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/bench4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Squat: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/squat4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Dead Lift: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/dead4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="35dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/client5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="&#8226; "
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Name 1"
+                        android:layout_marginBottom="0dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="Bench: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/bench5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Squat: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/squat5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="   |   Dead Lift: "
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/dead5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:text="100"
+                        android:layout_marginBottom="25dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+
+                    android:src="@drawable/icon2"
+                    android:layout_gravity="center_horizontal"
+
+                    android:scaleType="centerCrop"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
