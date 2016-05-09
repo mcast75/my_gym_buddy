@@ -33,6 +33,9 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
     TextView set1, set2, set3, set4, set5, currentWeight, currentReps, actualWeight1, actualWeight2, actualWeight3, actualWeight4, actualWeight5
             , actualReps1, actualReps2, actualReps3, actualReps4, actualReps5;
 
+    UserLocalStore mUserLocalStore;
+    User mUser;
+
     TextView preWeight1, preWeight2, preWeight3, preWeight4, preWeight5, preRep1, preRep2, preRep3, preRep4, preRep5;
 
     String weightRef, repRef;
@@ -147,6 +150,9 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
 
         preWeight1.setText(weightRef);
         preRep1.setText(repRef);
+
+        mUserLocalStore = new UserLocalStore(this);
+        mUser = mUserLocalStore.getLoggedInUser();
     }
 
     @Override
@@ -157,6 +163,13 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
         setExercise.setText(workoutPlan.ex1);
         workSets.setText(""+workoutPlan.numSets1);
         workReps.setText(""+workoutPlan.numReps1);
+
+
+        if(weightRef.equals("0")){
+            preWeight1.setText("BW");
+            currentWeight.setText("BW");
+            currentWeight.setEnabled(false);
+        }
 
         ImageView pic = (ImageView) findViewById(R.id.exPic);
         int resID = getResources().getIdentifier(fixName(setExercise.getText().toString()), "drawable", getPackageName());
@@ -181,6 +194,16 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bFinishWorkout:
+
+                int nextWorkout = mUser.numWorkouts + 1;
+                Log.d("ADebugTag", "int Next Workout: \n"+nextWorkout+"\n");
+                mUserLocalStore.updateWorkout(nextWorkout);
+                mUser = mUserLocalStore.getLoggedInUser();
+                Log.d("ADebugTag", "User numWorkouts: \n"+mUser.numWorkouts+"\n");
+
+
+                updateUser(mUser);
+
 
                 startActivity(new Intent(WorkSet.this, Home.class));
                 break;
@@ -228,6 +251,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
                         numSets = workoutPlan.numSets1;
                         Log.d("ADebugTag", "NUM SETS: \n"+numSets);
                         Log.d("ADebugTag", "NUM SETS2: \n"+workoutPlan.numSets1);
+
 
                         ImageView pic = (ImageView) findViewById(R.id.exPic);
                         int resID = getResources().getIdentifier(fixName(setExercise.getText().toString()), "drawable", getPackageName());
@@ -419,8 +443,8 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
                         Button home = new Button(this);
                         home.setId(R.id.bFinishWorkout);
                         home.setOnClickListener(this);
-//                        ViewGroup.LayoutParams lp = home.getLayoutParams();
-//                        lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                        ViewGroup.LayoutParams lp = home.getLayoutParams();
+                        lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
                         home.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
                                 , ViewGroup.LayoutParams.WRAP_CONTENT));
                         home.setText("Return Home");
@@ -552,7 +576,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
 
 
                             col3 = new TextView(mContext);
-                            Log.d("ADebugTag", "Weight Number: \n" + workoutPlan.weight1);
+                            Log.d("ADebugTag", "Weight NumberSet1: \n" + workoutPlan.weight1);
                             col3.setText(" "+workoutPlan.numReps1 + "");
                             col3.setTextSize(24);
 
@@ -605,7 +629,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
 
 
                             col3 = new TextView(mContext);
-                            Log.d("ADebugTag", "Weight Number: \n" + workoutPlan.weight1);
+                            Log.d("ADebugTag", "Weight NumberSet2: \n" + workoutPlan.weight1);
                             col3.setText(" " + workoutPlan.numReps2 + "");
                             col3.setTextSize(24);
 
@@ -659,7 +683,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
 
 
                             col3 = new TextView(mContext);
-                            Log.d("ADebugTag", "Weight Number: \n" + workoutPlan.weight1);
+                            Log.d("ADebugTag", "Weight NumberSet3: \n" + workoutPlan.weight1);
                             col3.setText(" "+workoutPlan.numReps3 + "");
                             col3.setTextSize(24);
 
@@ -695,7 +719,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
                         line5.setPadding(0, 0, 0, 20);
                         table.addView(line5);
 
-                        for(int i = 1; i<workoutPlan.numSets4; i++){
+                        for(int i = 1; i<=workoutPlan.numSets4; i++){
 
                             TableRow row2 = new TableRow(mContext);
 
@@ -714,7 +738,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
 
 
                             col3 = new TextView(mContext);
-                            Log.d("ADebugTag", "Weight Number: \n" + workoutPlan.weight1);
+                            Log.d("ADebugTag", "Weight NumberSet4: \n" + workoutPlan.weight1);
                             col3.setText(" "+workoutPlan.numReps4 + "");
                             col3.setTextSize(24);
 
@@ -1015,13 +1039,30 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
                         currentReps.setText("");
                         if(currentWeight.isEnabled()==true) {
                             currentWeight.setText("");
-                        }                        row3.setVisibility(View.VISIBLE);
-                        line3.setVisibility(View.VISIBLE);
+                        }
+                        //row3.setVisibility(View.VISIBLE);
+                        //line3.setVisibility(View.VISIBLE);
                         inputManager = (InputMethodManager)
                                 getSystemService(Context.INPUT_METHOD_SERVICE);
 
                         inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                                 InputMethodManager.HIDE_NOT_ALWAYS);
+
+                        if (numSets < 3) {
+                            currentReps.setVisibility(View.INVISIBLE);
+                            currentWeight.setVisibility(View.INVISIBLE);
+                            currentReps.setText("");
+                            currentWeight.setText("");
+
+                            saveSet.setVisibility(View.INVISIBLE);
+                            currentSet.setText("Complete");
+                            i=1;
+                            record.setVisibility(View.INVISIBLE);
+                            here.setVisibility(View.INVISIBLE);
+                            currentWeight.setEnabled(true);
+
+                        }
+
 
 
 
@@ -1046,7 +1087,7 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
                         inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                                 InputMethodManager.HIDE_NOT_ALWAYS);
 
-                        if (numSets < 4) {
+                        if (numSets < 3) {
                             currentReps.setVisibility(View.INVISIBLE);
                             currentWeight.setVisibility(View.INVISIBLE);
                             currentReps.setText("");
@@ -1183,6 +1224,17 @@ public class WorkSet extends AppCompatActivity implements View.OnClickListener {
         return temp;
 
 
+    }
+
+    private void updateUser(User user){
+        ServerRequests serverRequests = new ServerRequests((this));
+        serverRequests.updateUserDataInBackground(user, new GetUserCallback() {
+            @Override
+            public void done(User returnedUser) {
+                startActivity(new Intent(WorkSet.this, Home.class));
+            }
+
+        });
     }
 
 

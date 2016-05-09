@@ -48,6 +48,11 @@ public class ServerRequests {
         new StoreUserDataAsyncTask(user, userCallback).execute();
     }
 
+    public void updateUserDataInBackground(User user, GetUserCallback userCallback){
+        mProgressDialog.show();
+        new updateUserDataAsyncTask(user, userCallback).execute();
+    }
+
     public void fetchUserDataInBackground(User user, GetUserCallback callback){
         mProgressDialog.show();
         new fetchUserDataAsyncTask(user, callback).execute();
@@ -182,6 +187,60 @@ public class ServerRequests {
 
             HttpClient client = new DefaultHttpClient(httpRequestParams);
             HttpPost post = new HttpPost(SERVER_ADDRESS + "Register.php");
+
+            try {
+                post.setEntity(new UrlEncodedFormEntity(dataToSend));
+                HttpResponse httpResponse = client.execute(post);
+
+                HttpEntity entity = httpResponse.getEntity();
+                String result = EntityUtils.toString(entity);
+
+
+
+                Log.d("ADebugTag", "Value: \n" + result);
+                JSONObject jsonObject = new JSONObject(result);
+
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+
+        @Override
+        protected void onPostExecute(Void aVoid){
+
+            mProgressDialog.dismiss();
+            userCallback.done(null);
+            super.onPostExecute(aVoid);
+        }
+    }
+
+
+    public class updateUserDataAsyncTask extends AsyncTask<Void, Void, Void>{
+        User mUser;
+        GetUserCallback userCallback;
+        public updateUserDataAsyncTask(User user, GetUserCallback userCallback){
+            this.mUser = user;
+            this.userCallback = userCallback;
+        }
+
+        @Override
+        protected Void doInBackground(Void...params){
+
+            ArrayList<NameValuePair> dataToSend = new ArrayList<>();
+            dataToSend.add(new BasicNameValuePair("username", mUser.username + ""));
+            dataToSend.add(new BasicNameValuePair("numWorkouts", mUser.numWorkouts + ""));
+
+            HttpParams httpRequestParams = new BasicHttpParams();
+            HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
+            HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
+
+            HttpClient client = new DefaultHttpClient(httpRequestParams);
+            HttpPost post = new HttpPost(SERVER_ADDRESS + "UpdateUser.php");
 
             try {
                 post.setEntity(new UrlEncodedFormEntity(dataToSend));

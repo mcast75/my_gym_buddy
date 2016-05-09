@@ -23,6 +23,13 @@ public class UserLocalStore {
 
     }
 
+    public void updateWorkout(int workoutNum){
+        SharedPreferences.Editor spEditor = userLocalDatabase.edit();
+        spEditor.putInt("numWorkouts", workoutNum);
+        spEditor.commit();
+
+    }
+
     public void storeUserData(User user){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putString("name", user.name);

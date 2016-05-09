@@ -101,9 +101,9 @@ public class Workout extends AppCompatActivity implements View.OnClickListener {
             }
         }
 
-        //mWorkoutPlan = new WorkoutPlan(nextWorkout);
+        mWorkoutPlan = new WorkoutPlan(nextWorkout);
 
-        mWorkoutPlan = new WorkoutPlan("t1");
+        //mWorkoutPlan = new WorkoutPlan("t1");
 
         mWorkoutLocalStore = new WorkoutLocalStore(this);
 
